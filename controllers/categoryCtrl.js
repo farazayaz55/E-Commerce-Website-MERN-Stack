@@ -1,9 +1,10 @@
 const Category = require('../models/categoryModel')
-// const Products = require('../models/productModel')
+const Products = require('../models/productModel')
 
 const categoryCtrl = {
     getCategories: async(req, res) =>{
-        try {
+        try 
+        {
             const categories = await Category.find()
             res.json(categories)
         } catch (err) {
